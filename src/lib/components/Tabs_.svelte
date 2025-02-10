@@ -7,7 +7,7 @@
 </script>
 
 <div class="tabs">
-  <ul>
+  <ul class=" hover:text-surface-100">
     {#each items as item}
       <li>
         <button
@@ -24,11 +24,7 @@
 </div>
 
 <style>
-  .tabs {
-    margin-bottom: 0px;
-  }
   ul {
-
     display: flex;
     justify-content: space-around;
     padding: 0;
@@ -37,7 +33,6 @@
   li {
     margin: 0 16px;
     font-size: 18px;
-    color: #555;
     cursor: pointer;
   }
   .active {
@@ -47,6 +42,6 @@
   }
 
   .active:hover{
-    color: #186519;
+    color: #1f7c20;
   }
 </style>

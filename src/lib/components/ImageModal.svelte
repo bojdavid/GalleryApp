@@ -6,20 +6,25 @@
     let galleryItem = $modalStore[0]["props"]["galleryItem"]
     const addFavourites = $modalStore[0]["props"]["addFavourites"]
     
-    let isfav = localStorage.getItem('isfav') === "true";
-    console.log(isfav)
+    let active = JSON.parse(localStorage.getItem('active'));
+    let isfav = $state(active.inFav)
+    console.log(active)
 
     let favourite = $state("");
-    if(isfav){ favourite= ""}
-    else{ favourite="bg-primary-500"}
+    $effect(() => {
+        if(!isfav){ favourite= ""}
+        else{ favourite="bg-primary-500"}
+    })
     
     
     
-    const addFav_ = () =>{
-        
+    const addFav_ = () =>{ 
         addFavourites()
-        //console.log("Modal comp--------", localStorage.getItem('isfav') === "true")
-        if(localStorage.getItem('isfav') === "true"){
+        
+        let active_addFav = JSON.parse(localStorage.getItem('active'));
+        let isfav_addFav = active_addFav.inFav
+        
+        if(!isfav_addFav){
             favourite = "" 
         }
         else{ favourite = "bg-primary-500"}

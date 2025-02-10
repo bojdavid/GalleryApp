@@ -1,38 +1,64 @@
-# sv
+<h1>Project Title</h1>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+    <p>This project is deployed on Vercel. You can access it here: <a href="#">Project Link</a></p>
 
-## Creating a project
+    <h2>Running the App Locally</h2>
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
+    <ol>
+        <li>
+            <strong>Clone the Repository:</strong>
+            <pre><code>git clone &lt;repository-url&gt;
+cd &lt;repository-directory&gt;</code></pre>
+        </li>
+        <li>
+            <strong>Install Dependencies:</strong>
+            <p>Navigate to the root directory and run:</p>
+            <pre><code>npm install</code></pre>
+            <p>During installation, you might receive certain prompts:</p>
+            <ul>
+                <li><strong>Select a project template:</strong> Choose <em>skeleton</em>: A basic starter template with minimal configuration.</li>
+                <li><strong>Add TypeScript? (y/n):</strong> Select <em>no</em>.</li>
+                <li><strong>Add ESLint for code linting? (y/n):</strong> Select <em>no</em>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Start the Development Server:</strong>
+            <p>Once you've installed the dependencies, start the development server:</p>
+            <pre><code>npm run dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+npm run dev -- --open</code></pre>
+        </li>
+        <li>
+            <strong>Set Up API Key:</strong>
+            <p>To access the Pexels API:</p>
+            <ul>
+                <li>Go to <a href="https://www.pexels.com/api/">Pexels API</a> and obtain an API key.</li>
+                <li>Create a <code>.env</code> file in the root directory and add the API key:</li>
+            </ul>
+            <pre><code>APIKEY="your-api-key"</code></pre>
+        </li>
+    </ol>
 
-## Building
+    <h2>API Information</h2>
 
-To create a production version of your app:
+    <p>The images from the recommended API <a href="https://jsonplaceholder.typicode.com/photos">JSON Placeholder Photos</a> were not displaying. Therefore, this project uses the <a href="https://www.pexels.com">Pexels API</a>.</p>
 
-```bash
-npm run build
-```
+    <h2>Features</h2>
 
-You can preview the production build with `npm run preview`.
+    <ul>
+        <li>Implemented a feature for loading more images when a user reaches the end of the page using the Intersection Observer.</li>
+    </ul>
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+    <h2>Known Issues</h2>
+
+    <ol>
+        <li>
+            <strong>Image Display in Masonry Layout:</strong>
+            <p>If there are only two images—one with a height of 40 and another about double that height—both images are displayed side by side in the masonry layout. However, in the browser, the larger image doesn't show. Adding more images, particularly one under the smaller image to make the sizes similar, causes the larger image to display. You can check this by adding two images to favorites: a small one and a large one. The problem seems to be related to the <code>position: relative;</code> setting of the image container. A solution has not been identified at this moment.</p>
+        </li>
+        <li>
+            <strong>Removing an Image from Favorites:</strong>
+            <p>When an image is unliked in the favorites tab, it doesn't immediately disappear. You need to navigate back to the "All" tab and then return to the favorites tab for it to reflect the change. The cause of this issue is currently unknown.</p>
+        </li>
+    </ol>
