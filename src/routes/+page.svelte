@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte';
-    import { PUBLIC_KEY } from '$env/static/public';
     
     import "../styles/app.css";
     import ImageContainer from '$lib/components/ImageContainer.svelte';
@@ -19,7 +18,7 @@
 	    ImageModal: {ref: ImageModal}
 	};
 
-    const client = createClient(`${PUBLIC_KEY}`);
+    const client = createClient("ce4sFyrxgqsj9NXgiyu4b83jDnIlZgsKKNrI26hEZVH1eXLRMMWRqbxM")
 
 
     let galleryItems = $state([]);
