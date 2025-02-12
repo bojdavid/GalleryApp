@@ -4,8 +4,8 @@
 <ol>
         <li>
             <strong>Clone the Repository:</strong>
-            <pre><code>git clone &lt;https://github.com/bojdavid/GalleryApp.git&gt;
-            cd &lt;GalleryApp&gt;</code></pre>
+            <pre><code>git clone https://github.com/bojdavid/GalleryApp.git;
+            cd GalleryApp</code></pre>
         </li>
         <li>
             <strong>Install Dependencies:</strong>
