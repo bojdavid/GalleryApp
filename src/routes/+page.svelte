@@ -203,7 +203,6 @@ onMount(async () => {
             }else{
                 let get_elements = JSON.parse(localStorage.getItem("images"))
                 let element = get_elements.filter( item => item.id == singleImageid)
-                console.log("The image is ----", get_element)
                 localStorage.setItem("active", JSON.stringify({id:galleryItem.id, inFav:element.inFav}))
                 modal = {
                     type     : 'component',
