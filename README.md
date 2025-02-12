@@ -1,4 +1,4 @@
-<h1>Project Title</h1>
+<h1>Image Gallery</h1>
 <p>This project is deployed on Vercel. You can access it here: <a href="https://gallery-app-chi.vercel.app/">Project Link</a></p>
 <h2>Running the App Locally</h2>
 <ol>
