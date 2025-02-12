@@ -3,7 +3,7 @@
     import { PUBLIC_KEY } from '$env/static/public';
     
     import "../styles/app.css";
-    import ImageContainer from '$lib/components/imageContainer.svelte';
+    import ImageContainer from '$lib/components/ImageContainer.svelte';
     import ImageModal from "../lib/components/ImageModal.svelte"
     import Tabs from '$lib/components/Tabs_.svelte';
     import Query from '$lib/components/Query.svelte';
@@ -109,7 +109,7 @@ onMount(async () => {
                     id_liked =buffer_id_liked;      
                     localStorage.setItem("images", JSON.stringify(id_liked))
                 }
-                                  
+
                 load_id_liked();
                 loading_top =false;
             }
