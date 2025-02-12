@@ -7,9 +7,9 @@
 </script>
 
 <div class="tabs">
-  <ul class=" hover:text-surface-100">
+  <ul class="font-bold">
     {#each items as item}
-      <li>
+      <li class="hover:text-surface-700 dark:hover:text-surface-100 hover:scale-[1.1] transition duration-300 ease-in-out">
         <button
           type="button"
           onclick={() => handleTabChange(item)}
@@ -39,9 +39,7 @@
     color: #1bd91e;
     padding-bottom: 8px;
     transition: 0.3s ease-out;
+    text-decoration: underline;
   }
 
-  .active:hover{
-    color: #1f7c20;
-  }
 </style>

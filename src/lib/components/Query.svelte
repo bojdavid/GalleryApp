@@ -44,7 +44,7 @@
 ]
 </script>
 
-<div class="relative overflow-hidden w-4/5 m-auto">
+<div class="relative overflow-hidden w-full m-4">
     <div class="flex flex-row overflow-x-auto ">
         <div class="flex flex-row carousel">
 

@@ -33,7 +33,7 @@ npm run dev -- --open</code></pre>
                 <li>Go to <a href="https://www.pexels.com/api/">Pexels API</a> and obtain an API key.</li>
                 <li>Create a <code>.env</code> file in the root directory and add the API key:</li>
             </ul>
-            <pre><code>APIKEY="your-api-key"</code></pre>
+            <pre><code>PUBLIC_KEY="your-api-key"</code></pre>
         </li>
     </ol>
 
@@ -51,11 +51,7 @@ npm run dev -- --open</code></pre>
 
 <ol>
         <li>
-            <strong>Image Display in Masonry Layout:</strong>
+            <strong>Image Display in Masonry Layout: on safari-works on chrome</strong>
             <p>If there are only two images—one with a height of 40 and another about double that height—both images are displayed side by side in the masonry layout. However, in the browser, the larger image doesn't show. Adding more images, particularly one under the smaller image to make the sizes similar, causes the larger image to display. You can check this by adding two images to favorites: a small one and a large one. The problem seems to be related to the <code>position: relative;</code> setting of the image container. A solution has not been identified at this moment.</p>
-        </li>
-        <li>
-            <strong>Removing an Image from Favorites:</strong>
-            <p>When an image is unliked in the favorites tab, it doesn't immediately disappear. You need to navigate back to the "All" tab and then return to the favorites tab for it to reflect the change. The cause of this issue is currently unknown.</p>
         </li>
     </ol>
